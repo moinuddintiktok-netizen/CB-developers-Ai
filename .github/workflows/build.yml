@@ -1,4 +1,4 @@
-     name: Build Kubra Ultron Master Suite
+   name: Build Kubra Ultron Master Suite
 
 on:
   push:
@@ -34,4 +34,4 @@ jobs:
       with:
         name: Kubra-Ultron-Master-Supreme-EXE
         path: dist/ultron_omega_gui.exe
-   
+
