@@ -1,4 +1,4 @@
-name: Build Kubra Ultron Master Suite
+     name: Build Kubra Ultron Master Suite
 
 on:
   push:
@@ -23,15 +23,15 @@ jobs:
         python -m pip install --upgrade pip setuptools wheel
         pip install pipwin
         pipwin install pyaudio
-        pip install pyttsx3 SpeechRecognition requests pyautogui wikipedia comtypes pypiwin32 psutil
+        pip install pyttsx3 SpeechRecognition requests pyautogui wikipedia comtypes pypiwin32 psutil pyinstaller
 
     - name: Build Executable with PyInstaller
       run: |
-        pyinstaller --noconsole --onefile ultron_omega_gui.py
+        python -m PyInstaller --noconsole --onefile ultron_omega_gui.py
 
     - name: Upload Compiled EXE Artifact
       uses: actions/upload-artifact@v4
       with:
         name: Kubra-Ultron-Master-Supreme-EXE
         path: dist/ultron_omega_gui.exe
-        
+   
